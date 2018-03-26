@@ -1,0 +1,16 @@
+@* newUser Template File *@
+@()(implicit request: RequestHeader)
+
+@main("Signup Form"){
+	<h1>Make a new account?</h1><br>
+	<form id="login-form" action = "@routes.HomeController.newTaskList()" method="POST">
+		@helper.CSRF.formField
+		Username:<input type="text" name="username"><br>
+		Password:<input type="password" name="password"><br>
+		<input type="submit" value="Sign-Up">
+	</form>
+	
+	<form id="cancel" action="@routes.HomeController.login()" method="GET">
+	<input type = "submit" value="Cancel">
+	</form>
+}
