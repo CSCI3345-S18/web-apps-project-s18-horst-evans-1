@@ -1,0 +1,22 @@
+@* login Template File *@
+@(loginForm: Form[Loginformation])(implicit request: MessagesRequestHeader)
+
+@main("Login Form"){
+	<h1>Login to an Existing Account</h1><br>
+	<form id="login-form" action = "@routes.HomeController.taskList()" method="POST">
+		@helper.CSRF.formField
+		Username:<input type="text" name="username"><br>
+		Password:<input type="password" name="password"><br>
+		<input type="submit" value="Login">
+	</form>
+	<form id="signup" action = "@routes.HomeController.newUser()" method = "GET">
+	<input type="submit" value="Create Account">
+	</form>
+	<br>
+	<h1>Default Users:</h1><br>
+	<p>Username: username1</p>
+	<p>Password: password</p>
+	<br>
+	<p>Username: username2</p>
+	<p>Password: qwerty</p>
+}
