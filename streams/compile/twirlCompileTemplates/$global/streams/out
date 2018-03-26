@@ -1,2 +1,0 @@
-[0m[[0m[31merror[0m] [0m[0m[Error] /users/hevans/workspace/WebApp-Task6/app/views/login.scala.html:7[0m
-[0m[[0m[31merror[0m] [0m[0m	@helper.form(action = routes.HomeController.taskList()) {@: Expected '}' but found '@'[0m
