@@ -1,0 +1,16 @@
+[0m[[0m[0minfo[0m] [0m[0mFast optimizing /users/hevans/workspace/CSCI3345-S18-master/client/target/scala-2.12/csci3345-s18-client-fastopt.js[0m
+[0m[[0m[0mdebug[0m] [0m[0mLinker: Compute reachability: 128722 us[0m
+[0m[[0m[0mdebug[0m] [0m[0mLinker: Assemble LinkedClasses: 192368 us[0m
+[0m[[0m[0mdebug[0m] [0m[0mBasic Linking: 331303 us[0m
+[0m[[0m[0mdebug[0m] [0m[0mInc. optimizer: Batch mode: true[0m
+[0m[[0m[0mdebug[0m] [0m[0mInc. optimizer: Incremental part: 98900 us[0m
+[0m[[0m[0mdebug[0m] [0m[0mInc. optimizer: Optimizing 870 methods.[0m
+[0m[[0m[0mdebug[0m] [0m[0mInc. optimizer: Optimizer part: 229161 us[0m
+[0m[[0m[0mdebug[0m] [0m[0mInc. optimizer: 340230 us[0m
+[0m[[0m[0mdebug[0m] [0m[0mRefiner: Compute reachability: 59520 us[0m
+[0m[[0m[0mdebug[0m] [0m[0mRefiner: Assemble LinkedClasses: 8435 us[0m
+[0m[[0m[0mdebug[0m] [0m[0mRefiner: 70224 us[0m
+[0m[[0m[0mdebug[0m] [0m[0mEmitter: Class tree cache stats: reused: 33 -- invalidated: 40[0m
+[0m[[0m[0mdebug[0m] [0m[0mEmitter: Method tree cache stats: resued: 0 -- invalidated: 98[0m
+[0m[[0m[0mdebug[0m] [0m[0mEmitter (write output): 209479 us[0m
+[0m[[0m[0mdebug[0m] [0m[0mGlobal IR cache stats: reused: 8 -- invalidated: 2 -- trees read: 258[0m
