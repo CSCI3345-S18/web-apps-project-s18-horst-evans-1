@@ -63,19 +63,3 @@ GET		/spa/button2				controllers.SinglePageApp.button2Call
 
 + nocsrf
 POST	/spa/setCircle				controllers.SinglePageApp.setCircle
-
-######### Task 8: Slick ###########
-
-GET		/login						controllers.SlickController.login
-
-GET		/tasks						controllers.SlickController.allTasks
-
-POST	/tasks						controllers.SlickController.allTasks
-
-GET		/addTask					controllers.SlickController.addTask
-
-GET		/removeTask					controllers.SlickController.removeTask
-
-######### Task 9: Scala.JS ###########
-
-GET		/pong						controllers.PongController.start
