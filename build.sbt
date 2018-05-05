@@ -28,7 +28,7 @@ lazy val server = (project in file("server")).settings(commonSettings).settings(
 // Client sub-project - this is where the Scala.js stuff is
 lazy val client = (project in file("client")).settings(commonSettings).settings(
   name := "CSCI3345-S18-client",
-  	mainClass in Compile := Some("pong.PongMain"),
+  	mainClass in Compile := Some("spa.SPAMain"),
   scalaJSUseMainModuleInitializer := true,
   libraryDependencies ++= Seq(
     "org.scala-js" %%% "scalajs-dom" % "0.9.5",
