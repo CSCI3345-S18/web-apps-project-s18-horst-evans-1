@@ -1,0 +1,15 @@
+@* menu Template File *@
+@(menu: Seq[Food], menuForm: Form[NewFood], lang:Int)(implicit request: MessagesRequestHeader, flash: Flash)
+
+@main("Menu") {
+	<h2>Menu</h2>
+	<p>This page is a menu populated using Slick to populate a database.</p>
+	<table border="1">
+		<tr><th>Name</th><th>Description</th><th>FoodType</th><th>Price</th></tr>
+		@for(f <- menu) {
+			@if(f.language == lang) {
+				<tr><td>@f.name</td><td>@f.description</td><td>@f.foodType</td><td>@f.price</td></tr>
+			}
+		}
+	</table>
+}

@@ -1,6 +1,6 @@
 // @GENERATOR:play-routes-compiler
 // @SOURCE:/users/hevans/workspace/Restaurant/server/conf/routes
-// @DATE:Sat May 05 00:24:40 CDT 2018
+// @DATE:Sat May 05 14:17:09 CDT 2018
 
 import play.api.mvc.Call
 
@@ -9,6 +9,27 @@ import _root_.controllers.Assets.Asset
 
 // @LINE:6
 package controllers {
+
+  // @LINE:71
+  class ReverseRestaurantController(_prefix: => String) {
+    def _defaultPrefix: String = {
+      if (_prefix.endsWith("/")) "" else "/"
+    }
+
+  
+    // @LINE:73
+    def menu(): Call = {
+      
+      Call("GET", _prefix + { _defaultPrefix } + "restaurant/menu")
+    }
+  
+    // @LINE:71
+    def home(): Call = {
+      
+      Call("GET", _prefix + { _defaultPrefix } + "restaurant")
+    }
+  
+  }
 
   // @LINE:13
   class ReverseAssets(_prefix: => String) {

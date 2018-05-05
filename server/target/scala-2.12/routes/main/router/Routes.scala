@@ -1,6 +1,6 @@
 // @GENERATOR:play-routes-compiler
 // @SOURCE:/users/hevans/workspace/Restaurant/server/conf/routes
-// @DATE:Sat May 05 00:24:40 CDT 2018
+// @DATE:Sat May 05 14:17:09 CDT 2018
 
 package router
 
@@ -20,15 +20,17 @@ class Routes(
   // @LINE:10
   AsyncController_3: controllers.AsyncController,
   // @LINE:13
-  Assets_6: controllers.Assets,
+  Assets_7: controllers.Assets,
   // @LINE:26
   TempController_4: controllers.TempController,
   // @LINE:46
-  WSChatController_5: controllers.WSChatController,
+  WSChatController_6: controllers.WSChatController,
   // @LINE:52
   BookController_0: controllers.BookController,
   // @LINE:58
-  SinglePageApp_7: controllers.SinglePageApp,
+  SinglePageApp_8: controllers.SinglePageApp,
+  // @LINE:71
+  RestaurantController_5: controllers.RestaurantController,
   val prefix: String
 ) extends GeneratedRouter {
 
@@ -41,20 +43,22 @@ class Routes(
     // @LINE:10
     AsyncController_3: controllers.AsyncController,
     // @LINE:13
-    Assets_6: controllers.Assets,
+    Assets_7: controllers.Assets,
     // @LINE:26
     TempController_4: controllers.TempController,
     // @LINE:46
-    WSChatController_5: controllers.WSChatController,
+    WSChatController_6: controllers.WSChatController,
     // @LINE:52
     BookController_0: controllers.BookController,
     // @LINE:58
-    SinglePageApp_7: controllers.SinglePageApp
-  ) = this(errorHandler, HomeController_2, CountController_1, AsyncController_3, Assets_6, TempController_4, WSChatController_5, BookController_0, SinglePageApp_7, "/")
+    SinglePageApp_8: controllers.SinglePageApp,
+    // @LINE:71
+    RestaurantController_5: controllers.RestaurantController
+  ) = this(errorHandler, HomeController_2, CountController_1, AsyncController_3, Assets_7, TempController_4, WSChatController_6, BookController_0, SinglePageApp_8, RestaurantController_5, "/")
 
   def withPrefix(prefix: String): Routes = {
     router.RoutesPrefix.setPrefix(prefix)
-    new Routes(errorHandler, HomeController_2, CountController_1, AsyncController_3, Assets_6, TempController_4, WSChatController_5, BookController_0, SinglePageApp_7, prefix)
+    new Routes(errorHandler, HomeController_2, CountController_1, AsyncController_3, Assets_7, TempController_4, WSChatController_6, BookController_0, SinglePageApp_8, RestaurantController_5, prefix)
   }
 
   private[this] val defaultPrefix: String = {
@@ -86,6 +90,8 @@ class Routes(
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """spa/button2""", """controllers.SinglePageApp.button2Call"""),
     ("""POST""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """spa/setCircle""", """controllers.SinglePageApp.setCircle"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """jscanvas""", """controllers.SinglePageApp.jscanvas"""),
+    ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """restaurant""", """controllers.RestaurantController.home"""),
+    ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """restaurant/menu""", """controllers.RestaurantController.menu"""),
     Nil
   ).foldLeft(List.empty[(String,String,String)]) { (s,e) => e.asInstanceOf[Any] match {
     case r @ (_,_,_) => s :+ r.asInstanceOf[(String,String,String)]
@@ -152,7 +158,7 @@ class Routes(
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("assets/"), DynamicPart("file", """.+""",false)))
   )
   private[this] lazy val controllers_Assets_versioned3_invoker = createInvoker(
-    Assets_6.versioned(fakeValue[String], fakeValue[Asset]),
+    Assets_7.versioned(fakeValue[String], fakeValue[Asset]),
     play.api.routing.HandlerDef(this.getClass.getClassLoader,
       "router",
       "controllers.Assets",
@@ -368,7 +374,7 @@ class Routes(
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("wschat")))
   )
   private[this] lazy val controllers_WSChatController_index15_invoker = createInvoker(
-    WSChatController_5.index,
+    WSChatController_6.index,
     play.api.routing.HandlerDef(this.getClass.getClassLoader,
       "router",
       "controllers.WSChatController",
@@ -386,7 +392,7 @@ class Routes(
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("socket")))
   )
   private[this] lazy val controllers_WSChatController_socket16_invoker = createInvoker(
-    WSChatController_5.socket,
+    WSChatController_6.socket,
     play.api.routing.HandlerDef(this.getClass.getClassLoader,
       "router",
       "controllers.WSChatController",
@@ -440,7 +446,7 @@ class Routes(
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("spa")))
   )
   private[this] lazy val controllers_SinglePageApp_index19_invoker = createInvoker(
-    SinglePageApp_7.index,
+    SinglePageApp_8.index,
     play.api.routing.HandlerDef(this.getClass.getClassLoader,
       "router",
       "controllers.SinglePageApp",
@@ -458,7 +464,7 @@ class Routes(
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("spa/button1")))
   )
   private[this] lazy val controllers_SinglePageApp_button1Call20_invoker = createInvoker(
-    SinglePageApp_7.button1Call,
+    SinglePageApp_8.button1Call,
     play.api.routing.HandlerDef(this.getClass.getClassLoader,
       "router",
       "controllers.SinglePageApp",
@@ -476,7 +482,7 @@ class Routes(
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("spa/button2")))
   )
   private[this] lazy val controllers_SinglePageApp_button2Call21_invoker = createInvoker(
-    SinglePageApp_7.button2Call,
+    SinglePageApp_8.button2Call,
     play.api.routing.HandlerDef(this.getClass.getClassLoader,
       "router",
       "controllers.SinglePageApp",
@@ -494,7 +500,7 @@ class Routes(
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("spa/setCircle")))
   )
   private[this] lazy val controllers_SinglePageApp_setCircle22_invoker = createInvoker(
-    SinglePageApp_7.setCircle,
+    SinglePageApp_8.setCircle,
     play.api.routing.HandlerDef(this.getClass.getClassLoader,
       "router",
       "controllers.SinglePageApp",
@@ -512,7 +518,7 @@ class Routes(
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("jscanvas")))
   )
   private[this] lazy val controllers_SinglePageApp_jscanvas23_invoker = createInvoker(
-    SinglePageApp_7.jscanvas,
+    SinglePageApp_8.jscanvas,
     play.api.routing.HandlerDef(this.getClass.getClassLoader,
       "router",
       "controllers.SinglePageApp",
@@ -520,6 +526,42 @@ class Routes(
       Nil,
       "GET",
       this.prefix + """jscanvas""",
+      """""",
+      Seq()
+    )
+  )
+
+  // @LINE:71
+  private[this] lazy val controllers_RestaurantController_home24_route = Route("GET",
+    PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("restaurant")))
+  )
+  private[this] lazy val controllers_RestaurantController_home24_invoker = createInvoker(
+    RestaurantController_5.home,
+    play.api.routing.HandlerDef(this.getClass.getClassLoader,
+      "router",
+      "controllers.RestaurantController",
+      "home",
+      Nil,
+      "GET",
+      this.prefix + """restaurant""",
+      """""",
+      Seq()
+    )
+  )
+
+  // @LINE:73
+  private[this] lazy val controllers_RestaurantController_menu25_route = Route("GET",
+    PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("restaurant/menu")))
+  )
+  private[this] lazy val controllers_RestaurantController_menu25_invoker = createInvoker(
+    RestaurantController_5.menu,
+    play.api.routing.HandlerDef(this.getClass.getClassLoader,
+      "router",
+      "controllers.RestaurantController",
+      "menu",
+      Nil,
+      "GET",
+      this.prefix + """restaurant/menu""",
       """""",
       Seq()
     )
@@ -549,7 +591,7 @@ class Routes(
     // @LINE:13
     case controllers_Assets_versioned3_route(params@_) =>
       call(Param[String]("path", Right("/public")), params.fromPath[Asset]("file", None)) { (path, file) =>
-        controllers_Assets_versioned3_invoker.call(Assets_6.versioned(path, file))
+        controllers_Assets_versioned3_invoker.call(Assets_7.versioned(path, file))
       }
   
     // @LINE:15
@@ -621,13 +663,13 @@ class Routes(
     // @LINE:46
     case controllers_WSChatController_index15_route(params@_) =>
       call { 
-        controllers_WSChatController_index15_invoker.call(WSChatController_5.index)
+        controllers_WSChatController_index15_invoker.call(WSChatController_6.index)
       }
   
     // @LINE:48
     case controllers_WSChatController_socket16_route(params@_) =>
       call { 
-        controllers_WSChatController_socket16_invoker.call(WSChatController_5.socket)
+        controllers_WSChatController_socket16_invoker.call(WSChatController_6.socket)
       }
   
     // @LINE:52
@@ -645,31 +687,43 @@ class Routes(
     // @LINE:58
     case controllers_SinglePageApp_index19_route(params@_) =>
       call { 
-        controllers_SinglePageApp_index19_invoker.call(SinglePageApp_7.index)
+        controllers_SinglePageApp_index19_invoker.call(SinglePageApp_8.index)
       }
   
     // @LINE:60
     case controllers_SinglePageApp_button1Call20_route(params@_) =>
       call { 
-        controllers_SinglePageApp_button1Call20_invoker.call(SinglePageApp_7.button1Call)
+        controllers_SinglePageApp_button1Call20_invoker.call(SinglePageApp_8.button1Call)
       }
   
     // @LINE:62
     case controllers_SinglePageApp_button2Call21_route(params@_) =>
       call { 
-        controllers_SinglePageApp_button2Call21_invoker.call(SinglePageApp_7.button2Call)
+        controllers_SinglePageApp_button2Call21_invoker.call(SinglePageApp_8.button2Call)
       }
   
     // @LINE:65
     case controllers_SinglePageApp_setCircle22_route(params@_) =>
       call { 
-        controllers_SinglePageApp_setCircle22_invoker.call(SinglePageApp_7.setCircle)
+        controllers_SinglePageApp_setCircle22_invoker.call(SinglePageApp_8.setCircle)
       }
   
     // @LINE:67
     case controllers_SinglePageApp_jscanvas23_route(params@_) =>
       call { 
-        controllers_SinglePageApp_jscanvas23_invoker.call(SinglePageApp_7.jscanvas)
+        controllers_SinglePageApp_jscanvas23_invoker.call(SinglePageApp_8.jscanvas)
+      }
+  
+    // @LINE:71
+    case controllers_RestaurantController_home24_route(params@_) =>
+      call { 
+        controllers_RestaurantController_home24_invoker.call(RestaurantController_5.home)
+      }
+  
+    // @LINE:73
+    case controllers_RestaurantController_menu25_route(params@_) =>
+      call { 
+        controllers_RestaurantController_menu25_invoker.call(RestaurantController_5.menu)
       }
   }
 }

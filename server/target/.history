@@ -3,3 +3,15 @@ run 9010
 exit
 run 9010
 exit
+run 9010
+ssh pandora07
+cd
+exit
+run 9010
+exit
+run 9010
+exit
+run 9010
+run 9011
+run 9010
+exit
