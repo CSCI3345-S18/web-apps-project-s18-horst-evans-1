@@ -16,6 +16,11 @@ import play.api.data.Forms._
 import scala.concurrent.Future
 
 case class NewFood(name:String,description:String,price:BigDecimal,foodType:String,language:Int)
+case class NewCustomer(isManager:String,name:String,phone:String,points:Int,email:String,address:String,state:String,zip:String,username:String,password:String)
+case class NewOrder(name:String,foodId:Int,price:BigDecimal,description:String)
+
+//TODO add change functionality
+//TODO add manager functionality
 
 @Singleton
 class RestaurantController @Inject() (
@@ -23,7 +28,7 @@ class RestaurantController @Inject() (
   mcc: MessagesControllerComponents)(implicit ec: ExecutionContext)
   extends MessagesAbstractController(mcc) with HasDatabaseConfigProvider[JdbcProfile] {
   
-  var language = 2
+  var language = 1
   
   val newFoodForm = Form(mapping(
     "name" -> nonEmptyText,
@@ -39,6 +44,12 @@ class RestaurantController @Inject() (
   
   def home = Action { implicit request =>
     Ok(views.html.home())
+  }
+  
+  def changeLang = Action.async { implicit request =>
+    language = (language % 2) + 1
+    val menuFuture = MenuQueries.allFood(db)
+    menuFuture.map(menu => Ok(views.html.menu(menu, newFoodForm, language)))
   }
   
 }

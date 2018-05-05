@@ -1,11 +1,4 @@
-[0m[[0m[33mwarn[0m] [0m[0m/users/hevans/workspace/Restaurant/server/app/controllers/RestaurantController.scala:41:23: Adaptation of argument list by inserting () is deprecated: leaky (Object-receiving) target makes this especially dangerous.[0m
-[0m[[0m[33mwarn[0m] [0m[0m        signature: home.apply(param: Any): play.twirl.api.HtmlFormat.Appendable[0m
-[0m[[0m[33mwarn[0m] [0m[0m  given arguments: <none>[0m
-[0m[[0m[33mwarn[0m] [0m[0m after adaptation: home((): Unit)[0m
-[0m[[0m[33mwarn[0m] [0m[0m    Ok(views.html.home())[0m
-[0m[[0m[33mwarn[0m] [0m[0m                      ^[0m
-[0m[[0m[33mwarn[0m] [0m[0mone warning found[0m
-[0m[[0m[33mwarn[0m] [0m[0m/users/hevans/workspace/Restaurant/server/app/controllers/RestaurantController.scala:41:23: Adaptation of argument list by inserting () is deprecated: leaky (Object-receiving) target makes this especially dangerous.[0m
+[0m[[0m[33mwarn[0m] [0m[0m/users/hevans/workspace/Restaurant/server/app/controllers/RestaurantController.scala:46:23: Adaptation of argument list by inserting () is deprecated: leaky (Object-receiving) target makes this especially dangerous.[0m
 [0m[[0m[33mwarn[0m] [0m[0m        signature: home.apply(param: Any): play.twirl.api.HtmlFormat.Appendable[0m
 [0m[[0m[33mwarn[0m] [0m[0m  given arguments: <none>[0m
 [0m[[0m[33mwarn[0m] [0m[0m after adaptation: home((): Unit)[0m
