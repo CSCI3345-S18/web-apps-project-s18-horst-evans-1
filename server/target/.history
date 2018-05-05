@@ -50,3 +50,5 @@ exit
 run
 run 9081
 exit
+evicted
+exit

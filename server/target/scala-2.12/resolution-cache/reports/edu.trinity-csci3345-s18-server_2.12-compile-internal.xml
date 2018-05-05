@@ -7,7 +7,7 @@
 		revision="0.1.0-SNAPSHOT"
 		conf="compile-internal"
 		confs="compile, runtime, test, provided, optional, universal, universal-docs, universal-src, windows, docker, linux, rpm, debian, compile-internal, runtime-internal, test-internal, plugin, pom, scala-tool, docs"
-		date="20180413202759"/>
+		date="20180504231518"/>
 	<dependencies>
 		<module organisation="com.typesafe.slick" name="slick-codegen_2.12">
 			<revision name="3.2.3" status="release" pubdate="20180323130959" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://slick.typesafe.com" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="59">
@@ -916,7 +916,7 @@
 			</revision>
 		</module>
 		<module organisation="edu.trinity" name="csci3345-s18-shared_2.12">
-			<revision name="0.1.0-SNAPSHOT" status="integration" pubdate="20180413202758" resolver="inter-project" artresolver="inter-project" downloaded="false" searched="false" default="false" conf="compile, default(compile)" position="1">
+			<revision name="0.1.0-SNAPSHOT" status="integration" pubdate="20180504231518" resolver="inter-project" artresolver="inter-project" downloaded="false" searched="false" default="false" conf="compile, default(compile)" position="1">
 				<metadata-artifact status="failed" details="" size="0" time="0" searched="false"/>
 				<caller organisation="edu.trinity" name="csci3345-s18-server_2.12" conf="compile-internal, compile, provided, optional" rev="0.1.0-SNAPSHOT" rev-constraint-default="0.1.0-SNAPSHOT" rev-constraint-dynamic="0.1.0-SNAPSHOT" callerrev="0.1.0-SNAPSHOT"/>
 				<artifacts>
