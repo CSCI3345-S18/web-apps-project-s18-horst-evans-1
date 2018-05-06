@@ -42,11 +42,11 @@ class RestaurantController @Inject() (
     "username" -> nonEmptyText,
     "password" -> nonEmptyText)(Login.apply)(Login.unapply))
     
-  def menu = Action.async { implicit request =>
+  def login = Action.async { implicit request =>
     Future(Ok(views.html.login(loginForm)))
   }
   
-  def login = Action.async { implicit request =>
+  def menu = Action.async { implicit request =>
     val menuFuture = RestaurantQueries.allFood(db)
     menuFuture.map(menu => Ok(views.html.menu(menu, newFoodForm, language)))
   }
@@ -67,7 +67,6 @@ class RestaurantController @Inject() (
         val username = formData("username").head.toString
         val password = formData("password").head.toString
         val userFuture = RestaurantQueries.findUser(db,username,password)
-        //-----
         if(!username.isEmpty && !password.isEmpty){
           userFuture.map(user =>
             Ok(views.html.home()).withSession("uss" -> username, "pss" -> password, "user" -> user.get.isManager.toString)
