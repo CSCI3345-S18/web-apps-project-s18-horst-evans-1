@@ -1,9 +1,9 @@
-[0m[[0m[33mwarn[0m] [0m[0m/users/hevans/workspace/Restaurant/client/src/main/scala/spa/SPAMain.scala:17:7: Top-level native JS classes and objects should have an @JSGlobal or @JSImport annotation. This will be enforced in 1.0.[0m
+[0m[[0m[33mwarn[0m] [0m[0m/users/ggonzal2/Local/HTML-Documents/WebApps/web-apps-project-s18-horst-evans-1/client/src/main/scala/spa/SPAMain.scala:17:7: Top-level native JS classes and objects should have an @JSGlobal or @JSImport annotation. This will be enforced in 1.0.[0m
 [0m[[0m[33mwarn[0m] [0m[0m  If migrating from 0.6.14 or earlier, the equivalent behavior is an @JSGlobal without parameter.[0m
 [0m[[0m[33mwarn[0m] [0m[0m  (you can suppress this warning in 0.6.x by passing the option `-P:scalajs:suppressMissingJSGlobalDeprecations` to scalac)[0m
 [0m[[0m[33mwarn[0m] [0m[0mclass Circle([0m
 [0m[[0m[33mwarn[0m] [0m[0m      ^[0m
-[0m[[0m[33mwarn[0m] [0m[0m/users/hevans/workspace/Restaurant/client/src/main/scala/spa/SPAMain.scala:23:7: Top-level native JS classes and objects should have an @JSGlobal or @JSImport annotation. This will be enforced in 1.0.[0m
+[0m[[0m[33mwarn[0m] [0m[0m/users/ggonzal2/Local/HTML-Documents/WebApps/web-apps-project-s18-horst-evans-1/client/src/main/scala/spa/SPAMain.scala:23:7: Top-level native JS classes and objects should have an @JSGlobal or @JSImport annotation. This will be enforced in 1.0.[0m
 [0m[[0m[33mwarn[0m] [0m[0m  If migrating from 0.6.14 or earlier, the equivalent behavior is an @JSGlobal without parameter.[0m
 [0m[[0m[33mwarn[0m] [0m[0m  (you can suppress this warning in 0.6.x by passing the option `-P:scalajs:suppressMissingJSGlobalDeprecations` to scalac)[0m
 [0m[[0m[33mwarn[0m] [0m[0mclass Rectangle([0m

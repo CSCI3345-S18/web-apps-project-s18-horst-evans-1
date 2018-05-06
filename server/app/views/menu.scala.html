@@ -8,8 +8,17 @@
 		<tr><th>Name</th><th>Description</th><th>FoodType</th><th>Price</th></tr>
 		@for(f <- menu) {
 			@if(f.language == lang) {
-				<tr><td>@f.name</td><td>@f.description</td><td>@f.foodType</td><td>@f.price</td></tr>
+			<<form id="table-form" action="@routes.TempController.tempTable()" method="POST">
+				<tr><td>@f.name</td><td>@f.description</td><td>@f.foodType</td><td>@f.price</td><td> <a href="@controllers.routes.RestaurantController.price">add to cart</a></td></tr>
 			}
 		}
 	</table>
+		@helper.form() {
+	  @helper.inputText(foodFrom("id"))
+	  @helper.inputText(foodFrom("price"))
+	  @helper.inputText(foodFrom("name"))
+	  @helper.inputText(foodFrom("description"))
+	  <input type="submit" value="Submit">
+	}
+
 }
