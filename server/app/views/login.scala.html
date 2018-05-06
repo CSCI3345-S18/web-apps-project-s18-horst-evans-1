@@ -1,0 +1,24 @@
+@* login Template File *@
+@(loginForm: Form[Login])(implicit request: MessagesRequestHeader)
+
+@main("Login Form"){
+	<br>
+	<h2>Login to an Existing Account</h2>
+	
+	<h1>If the account does not exist, it will make a new profile</h1>
+	<br>
+	<form id="login-form" action = "@routes.RestaurantController.credentials()" method="POST">
+		@helper.CSRF.formField
+		Username:<input type="text" name="username"><br>
+		Password:<input type="password" name="password"><br>
+		<input type="submit" value="Login">
+	</form>
+	<br><br><br>
+	<h1><b>Default Users:</b></h1><br>
+	<p>Username: heaven</p>
+	<p>Password: heaven</p>
+	<br>
+	<p>Username: ggYes</p>
+	<p>Password: Yes</p>
+}
+

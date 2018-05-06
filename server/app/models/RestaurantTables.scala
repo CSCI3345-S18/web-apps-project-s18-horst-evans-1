@@ -15,7 +15,7 @@ object RestaurantTables {
   val menu = TableQuery[Menu]
   
   class Customers(tag: Tag) extends Table[Customer](tag, "customers") {
-    def isManager = column[String]("isManager")
+    def isManager = column[Int]("isManager")
     def name = column[String]("name")
     def phone = column[String]("phone")
     def points = column[Int]("rewardPoints")

@@ -1,6 +1,6 @@
 // @GENERATOR:play-routes-compiler
 // @SOURCE:/users/hevans/workspace/Restaurant/server/conf/routes
-// @DATE:Sat May 05 14:17:09 CDT 2018
+// @DATE:Sat May 05 21:38:03 CDT 2018
 
 import play.api.routing.JavaScriptReverseRoute
 
@@ -18,6 +18,16 @@ package controllers.javascript {
     }
 
   
+    // @LINE:77
+    def credentials: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.RestaurantController.credentials",
+      """
+        function() {
+          return _wA({method:"POST", url:"""" + _prefix + { _defaultPrefix } + """" + "restaurant"})
+        }
+      """
+    )
+  
     // @LINE:73
     def menu: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.RestaurantController.menu",
@@ -34,6 +44,16 @@ package controllers.javascript {
       """
         function() {
           return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "restaurant"})
+        }
+      """
+    )
+  
+    // @LINE:75
+    def login: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.RestaurantController.login",
+      """
+        function() {
+          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "restaurant/login"})
         }
       """
     )

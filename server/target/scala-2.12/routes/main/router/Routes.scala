@@ -1,6 +1,6 @@
 // @GENERATOR:play-routes-compiler
 // @SOURCE:/users/hevans/workspace/Restaurant/server/conf/routes
-// @DATE:Sat May 05 14:17:09 CDT 2018
+// @DATE:Sat May 05 21:38:03 CDT 2018
 
 package router
 
@@ -92,6 +92,8 @@ class Routes(
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """jscanvas""", """controllers.SinglePageApp.jscanvas"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """restaurant""", """controllers.RestaurantController.home"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """restaurant/menu""", """controllers.RestaurantController.menu"""),
+    ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """restaurant/login""", """controllers.RestaurantController.login"""),
+    ("""POST""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """restaurant""", """controllers.RestaurantController.credentials"""),
     Nil
   ).foldLeft(List.empty[(String,String,String)]) { (s,e) => e.asInstanceOf[Any] match {
     case r @ (_,_,_) => s :+ r.asInstanceOf[(String,String,String)]
@@ -567,6 +569,42 @@ class Routes(
     )
   )
 
+  // @LINE:75
+  private[this] lazy val controllers_RestaurantController_login26_route = Route("GET",
+    PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("restaurant/login")))
+  )
+  private[this] lazy val controllers_RestaurantController_login26_invoker = createInvoker(
+    RestaurantController_5.login,
+    play.api.routing.HandlerDef(this.getClass.getClassLoader,
+      "router",
+      "controllers.RestaurantController",
+      "login",
+      Nil,
+      "GET",
+      this.prefix + """restaurant/login""",
+      """""",
+      Seq()
+    )
+  )
+
+  // @LINE:77
+  private[this] lazy val controllers_RestaurantController_credentials27_route = Route("POST",
+    PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("restaurant")))
+  )
+  private[this] lazy val controllers_RestaurantController_credentials27_invoker = createInvoker(
+    RestaurantController_5.credentials,
+    play.api.routing.HandlerDef(this.getClass.getClassLoader,
+      "router",
+      "controllers.RestaurantController",
+      "credentials",
+      Nil,
+      "POST",
+      this.prefix + """restaurant""",
+      """""",
+      Seq()
+    )
+  )
+
 
   def routes: PartialFunction[RequestHeader, Handler] = {
   
@@ -724,6 +762,18 @@ class Routes(
     case controllers_RestaurantController_menu25_route(params@_) =>
       call { 
         controllers_RestaurantController_menu25_invoker.call(RestaurantController_5.menu)
+      }
+  
+    // @LINE:75
+    case controllers_RestaurantController_login26_route(params@_) =>
+      call { 
+        controllers_RestaurantController_login26_invoker.call(RestaurantController_5.login)
+      }
+  
+    // @LINE:77
+    case controllers_RestaurantController_credentials27_route(params@_) =>
+      call { 
+        controllers_RestaurantController_credentials27_invoker.call(RestaurantController_5.credentials)
       }
   }
 }

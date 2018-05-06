@@ -39,7 +39,7 @@ Seq[Any]()
 
               /*
                   -- GENERATED --
-                  DATE: Sat May 05 14:20:56 CDT 2018
+                  DATE: Sat May 05 21:29:29 CDT 2018
                   SOURCE: /users/hevans/workspace/Restaurant/server/app/views/home.scala.html
                   HASH: af1ee40b1774d92aafd18312612fcb2cdc829dfe
                   MATRIX: 745->26

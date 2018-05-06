@@ -1,6 +1,6 @@
 // @GENERATOR:play-routes-compiler
 // @SOURCE:/users/hevans/workspace/Restaurant/server/conf/routes
-// @DATE:Sat May 05 14:17:09 CDT 2018
+// @DATE:Sat May 05 21:38:03 CDT 2018
 
 
 package router {

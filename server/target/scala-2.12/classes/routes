@@ -72,3 +72,7 @@ GET		/restaurant					controllers.RestaurantController.home
 
 GET		/restaurant/menu			controllers.RestaurantController.menu
 
+GET		/restaurant/login			controllers.RestaurantController.login
+
+POST	/restaurant					controllers.RestaurantController.credentials
+

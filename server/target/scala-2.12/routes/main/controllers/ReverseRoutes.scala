@@ -1,6 +1,6 @@
 // @GENERATOR:play-routes-compiler
 // @SOURCE:/users/hevans/workspace/Restaurant/server/conf/routes
-// @DATE:Sat May 05 14:17:09 CDT 2018
+// @DATE:Sat May 05 21:38:03 CDT 2018
 
 import play.api.mvc.Call
 
@@ -17,6 +17,12 @@ package controllers {
     }
 
   
+    // @LINE:77
+    def credentials(): Call = {
+      
+      Call("POST", _prefix + { _defaultPrefix } + "restaurant")
+    }
+  
     // @LINE:73
     def menu(): Call = {
       
@@ -27,6 +33,12 @@ package controllers {
     def home(): Call = {
       
       Call("GET", _prefix + { _defaultPrefix } + "restaurant")
+    }
+  
+    // @LINE:75
+    def login(): Call = {
+      
+      Call("GET", _prefix + { _defaultPrefix } + "restaurant/login")
     }
   
   }
