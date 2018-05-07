@@ -6,6 +6,6 @@
 [0m[[0m[0mdebug[0m] [0m[0m	-bootclasspath[0m
 [0m[[0m[0mdebug[0m] [0m[0m	/usr/java/jdk1.8.0_144/jre/lib/resources.jar:/usr/java/jdk1.8.0_144/jre/lib/rt.jar:/usr/java/jdk1.8.0_144/jre/lib/sunrsasign.jar:/usr/java/jdk1.8.0_144/jre/lib/jsse.jar:/usr/java/jdk1.8.0_144/jre/lib/jce.jar:/usr/java/jdk1.8.0_144/jre/lib/charsets.jar:/usr/java/jdk1.8.0_144/jre/lib/jfr.jar:/usr/java/jdk1.8.0_144/jre/classes:/users/hevans/.ivy2/cache/org.scala-lang/scala-library/jars/scala-library-2.12.5.jar[0m
 [0m[[0m[0mdebug[0m] [0m[0m	-classpath[0m
-[0m[[0m[0mdebug[0m] [0m[0m	dummy_88429f49[0m
+[0m[[0m[0mdebug[0m] [0m[0m	dummy_b993a55b[0m
 [0m[[0m[0mdebug[0m] [0m[0m	/users/hevans/workspace/Restaurant/shared/src/main/scala/spa/SharedMessages.scala[0m
 [0m[[0m[0minfo[0m] [0m[0mMain Scala API documentation successful.[0m

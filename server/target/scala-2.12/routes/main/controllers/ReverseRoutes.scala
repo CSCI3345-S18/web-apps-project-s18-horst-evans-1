@@ -1,6 +1,6 @@
 // @GENERATOR:play-routes-compiler
 // @SOURCE:/users/hevans/workspace/Restaurant/server/conf/routes
-// @DATE:Mon May 07 04:31:38 CDT 2018
+// @DATE:Mon May 07 10:11:17 CDT 2018
 
 import play.api.mvc.Call
 

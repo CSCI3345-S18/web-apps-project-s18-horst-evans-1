@@ -102,4 +102,4 @@ POST	/restaurant/menu/edit		controllers.RestaurantController.editFood(name:Strin
 
 POST	/restaurant/menu/eq			controllers.RestaurantController.editQuery(name:String)
 
-POST		/restaurant/login/out		controllers.RestaurantController.logout
+POST	/restaurant/login/out		controllers.RestaurantController.logout
