@@ -1,2 +1,50 @@
 @* home Template File *@
 @(param: Any)
+<head>
+	<link rel="stylesheet" media="screen" href="@routes.Assets.versioned("stylesheets/project.css")">
+</head>
+<body>
+<div class = "menuBar">
+	<ul>
+		<li><form action="@controllers.routes.RestaurantController.login"><input type="submit" value="Login" id="submit"></form></li>
+		<li><form action="@controllers.routes.RestaurantController.menu"><input type="submit" value="Menu" id="submit"></form></li>
+		<li><form action="@controllers.routes.RestaurantController.showAboutE"><input type="submit" value="About" id="submit"></form></li>
+		<li><form action="@controllers.routes.RestaurantController.showHome"><input type="submit" value="Home" id="submit"></form></li>
+		
+	</ul>
+	</div>
+
+</body>
+<br>
+ <img class="banner" src="@routes.Assets.versioned("images/banner3.jpg")"/>
+ 
+ <p class="title">Diligencias</p><br>
+ <hr class="line">
+ 
+ <div class="container">
+ <h1><u>About Us</u></h1>
+ <p>Check out how to find us!
+ <ul>
+ <form action="@controllers.routes.RestaurantController.showAboutE"><input type="submit" value="About" id="submit"></form>
+ </ul>
+ </p>
+ </div>
+
+
+ <div class="container2">
+ <h1><u>Menu</u></h1>
+ <p>Check out our different menus!
+ <ul>
+ <form action="@controllers.routes.RestaurantController.menu"><input type="submit" value="Menu" id="submit"></form>
+ </ul>
+ </p>
+ </div>
+ 
+  <div class="container">
+ <h1><u>Login</u></h1>
+ <p>Login so we can monitor you and everything you do
+ <ul>
+ <form action="@controllers.routes.RestaurantController.login"><input type="submit" value="Login" id="submit"></form>
+ </ul>
+ </p>
+ </div>

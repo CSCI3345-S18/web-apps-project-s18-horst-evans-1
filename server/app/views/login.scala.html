@@ -1,24 +1,66 @@
 @* login Template File *@
-@(loginForm: Form[Login])(implicit request: MessagesRequestHeader)
+@(customers:Seq[models.Customer],loginForm: Form[Login],newUserForm:Form[NewCustomer])(implicit request: MessagesRequestHeader)
+
+<head>
+	<link rel="stylesheet" media="screen" href="@routes.Assets.versioned("stylesheets/project.css")">
+</head>
+<body><br><br><br>
+<div class = "menuBar">
+	<ul>
+		<li><form action="@controllers.routes.RestaurantController.login"><input type="submit" value="Login" id="submit"></form></li>
+		<li><form action="@controllers.routes.RestaurantController.menu"><input type="submit" value="Menu" id="submit"></form></li>
+		<li><form action="@controllers.routes.RestaurantController.showAboutE"><input type="submit" value="About" id="submit"></form></li>
+		<li><form action="@controllers.routes.RestaurantController.showHome"><input type="submit" value="Home" id="submit"></form></li>
+		
+	</ul>
+	</div>
+</body>
 
 @main("Login Form"){
 	<br>
 	<h2>Login to an Existing Account</h2>
-	
-	<h1>If the account does not exist, it will make a new profile</h1>
 	<br>
+	<div class="container">
+	<h3>Login</h3><br>
 	<form id="login-form" action = "@routes.RestaurantController.credentials()" method="POST">
 		@helper.CSRF.formField
-		Username:<input type="text" name="username"><br>
-		Password:<input type="password" name="password"><br>
+		Username: <input type="text" name="username" placeholder="Your name..."><br><br>
+		Password: <input type="password" name="password" placeholder="Your password..."><br><br>
 		<input type="submit" value="Login">
 	</form>
+	</div>
+	
+	<br>
+	<div class="container">
+	<h3>New User</h3>
+		@helper.form(action = helper.CSRF(routes.RestaurantController.newCustomer)) {
+			@helper.inputText(newUserForm("Name"))
+			@helper.inputText(newUserForm("phone"))
+			@helper.inputText(newUserForm("email"))
+			@helper.inputText(newUserForm("address"))
+			@helper.inputText(newUserForm("state"))
+			@helper.inputText(newUserForm("zip"))
+			@helper.inputText(newUserForm("username"))
+			@helper.inputText(newUserForm("password"))
+			<input type="submit" name ="userbtn" value="Submit">
+		}
+	</div>
+	<br>
+	<div class="container">
+		@helper.form(action = helper.CSRF(routes.RestaurantController.logout)) {
+			<input type="submit" value="Logout">
+		}
+	</div>
+
 	<br><br><br>
 	<h1><b>Default Users:</b></h1><br>
 	<p>Username: heaven</p>
 	<p>Password: heaven</p>
+	<p>(Manager Account)</p>
 	<br>
 	<p>Username: ggYes</p>
 	<p>Password: Yes</p>
+	<p>(Normal Account)</p>
+	</div>
 }
 

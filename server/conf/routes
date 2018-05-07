@@ -3,7 +3,7 @@
 # ~~~~
 
 # An example controller showing a sample home page
-GET     /                           controllers.HomeController.index
+GET     /index                          controllers.HomeController.index
 # An example controller showing how to use dependency injection
 GET     /count                      controllers.CountController.count
 # An example controller showing how to write asynchronous code
@@ -68,7 +68,7 @@ GET		/jscanvas					controllers.SinglePageApp.jscanvas
 
 ######### Routes for the WebSocket chatting code ###########
 
-GET		/restaurant					controllers.RestaurantController.home
+GET		/							controllers.RestaurantController.home
 
 GET		/restaurant/menu			controllers.RestaurantController.menu
 
@@ -76,3 +76,30 @@ GET		/restaurant/login			controllers.RestaurantController.login
 
 POST	/restaurant					controllers.RestaurantController.credentials
 
+POST	/restaurant/menu/cl			controllers.RestaurantController.changeLang
+
+POST	/restaurant/menu/check		controllers.RestaurantController.checkout
+
+POST	/restaurant/menu/addFood	controllers.RestaurantController.addFood
+
+POST	/restaurant/menu/removeFood	controllers.RestaurantController.removeFood(name:String)
+
+GET		/restaurant/home			controllers.RestaurantController.showHome
+
+GET		/restaurant/about			controllers.RestaurantController.showAbout
+
+GET		/restaurant/login/nc		controllers.RestaurantController.newCustomer
+
+GET		/about						controllers.RestaurantController.showAboutE
+
+GET		/aboutsp					controllers.RestaurantController.spanish
+
+POST	/restaurant/menu/addToCheckout	controllers.RestaurantController.addToCheckout(name:String,price:Double,desc:String)
+
+POST	/restaurant/menu/clear		controllers.RestaurantController.clear
+
+POST	/restaurant/menu/edit		controllers.RestaurantController.editFood(name:String,desc:String,ft:String,price:Double,lang:Int)
+
+POST	/restaurant/menu/eq			controllers.RestaurantController.editQuery(name:String)
+
+POST		/restaurant/login/out		controllers.RestaurantController.logout

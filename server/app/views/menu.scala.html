@@ -1,15 +1,67 @@
 @* menu Template File *@
-@(menu: Seq[Food], menuForm: Form[NewFood], lang:Int)(implicit request: MessagesRequestHeader, flash: Flash)
+@(menuMap: Map[String,Seq[models.Food]], menuForm: Form[NewFood], lang:Int, isManager:String)(implicit request: MessagesRequestHeader, flash: Flash)
+
+<head>
+	<link rel="stylesheet" media="screen" href="@routes.Assets.versioned("stylesheets/project.css")">
+</head>
+<body>
+<div class = "menuBar">
+	<ul>
+		<li><form action="@controllers.routes.RestaurantController.login"><input type="submit" value="Login" id="submit"></form></li>
+		<li><form action="@controllers.routes.RestaurantController.menu"><input type="submit" value="Menu" id="submit"></form></li>
+		<li><form action="@controllers.routes.RestaurantController.showAboutE"><input type="submit" value="About" id="submit"></form></li>
+		<li><form action="@controllers.routes.RestaurantController.showHome"><input type="submit" value="Home" id="submit"></form></li>
+		
+	</ul>
+	</div>
+
+</body>
 
 @main("Menu") {
-	<h2>Menu</h2>
-	<p>This page is a menu populated using Slick to populate a database.</p>
-	<table border="1">
-		<tr><th>Name</th><th>Description</th><th>FoodType</th><th>Price</th></tr>
-		@for(f <- menu) {
-			@if(f.language == lang) {
-				<tr><td>@f.name</td><td>@f.description</td><td>@f.foodType</td><td>@f.price</td></tr>
-			}
+	<br><br><br><h2>Menu</h2><br><br>
+
+	@for((k,menu) <- menuMap){
+		@if(menu.head.language == 1) {
+			<table class="table" border="1">
+				<tr><th>Name</th><th>Description</th><th>Price</th>
+				@if(isManager=="1"){
+							<th>Remove Item</th>
+					}
+					</tr>
+				@for(f <- menu) {
+					<tr><td>@f.name</td><td>@f.description</td><td>@f.price</td>
+						@if(isManager=="1"){
+							<td>@helper.form(action = helper.CSRF(routes.RestaurantController.removeFood(f.name))) {
+						  		<input type="remove" value="Remove Food" />}
+							</td>
+							<td>@helper.form(action = helper.CSRF(routes.RestaurantController.editFood(f.name,f.description,f.foodType,f.price,f.language))) {
+						  		<input type="submit" value="Edit Food" />}
+							</td>
+						}
+						<td>@helper.form(action = helper.CSRF(routes.RestaurantController.addToCheckout(f.name,f.price,f.description))) {
+						  		<input type="submit" value="Add To Checkout" />}</td>
+					</tr>
+				}
+			</table>
+			<br>
 		}
-	</table>
+	}
+	@helper.form(action = helper.CSRF(routes.RestaurantController.changeLang)) {
+		<input type="submit" value="Change Language">
+	}
+	<br>
+	@helper.form(action = helper.CSRF(routes.RestaurantController.checkout)) {
+		<input type="submit" value="To Checkout">
+	}
+	<br>
+	@if(isManager=="1"){
+		@helper.form(action = helper.CSRF(routes.RestaurantController.addFood)) {
+		  @helper.inputText(menuForm("name"))
+		  @helper.inputText(menuForm("description"))
+		  @helper.inputText(menuForm("type"))
+		  @helper.inputText(menuForm("price"))
+		  @helper.inputText(menuForm("lan"))
+		  <input type="submit" value="Add Item">
+		}
+	}
 }

@@ -1,0 +1,34 @@
+@* edit Template File *@
+@(name:String, desc:String, ft:String, price:Double, language:Int, menuForm: Form[NewFood])(implicit request: MessagesRequestHeader, flash: Flash)
+
+<head>
+	<link rel="stylesheet" media="screen" href="@routes.Assets.versioned("stylesheets/project.css")">
+</head>
+<body>
+<div class = "menuBar">
+	<ul>
+		<li><form action="@controllers.routes.RestaurantController.login"><input type="submit" value="Login" id="submit"></form></li>
+		<li><form action="@controllers.routes.RestaurantController.menu"><input type="submit" value="Menu" id="submit"></form></li>
+		<li><form action="@controllers.routes.RestaurantController.showAboutE"><input type="submit" value="About" id="submit"></form></li>
+		<li><form action="@controllers.routes.RestaurantController.showHome"><input type="submit" value="Home" id="submit"></form></li>
+		
+	</ul>
+	</div>
+
+</body><br><br>
+
+@main("Menu") {
+	@helper.form(action = helper.CSRF(routes.RestaurantController.editQuery(name))) {
+	  <p>Name: @name</p>
+	  @helper.inputText(menuForm("name"))
+	  <p>Description: @desc</p>
+	  @helper.inputText(menuForm("description"))
+	  <p>Type: @ft</p>
+	  @helper.inputText(menuForm("type"))
+	  <p>Price: @price</p>
+	  @helper.inputText(menuForm("price"))
+	  <p>Language: @language</p>
+	  @helper.inputText(menuForm("lan"))
+	  <input type="submit" value="Edit Item">
+	}
+}

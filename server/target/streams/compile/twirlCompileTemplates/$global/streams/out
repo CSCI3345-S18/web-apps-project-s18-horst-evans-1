@@ -1,0 +1,3 @@
+[0m[[0m[31merror[0m] [0m[0m[Error] /users/hevans/workspace/Restaurant/server/app/views/menu.scala.html:37[0m
+[0m[[0m[31merror[0m] [0m[0m}: Expected '}' but found 'EOF'[0m
+[0m[[0m[31merror[0m] [0m[0m(Compile / [31mtwirlCompileTemplates[0m) Twirl compilation failed[0m

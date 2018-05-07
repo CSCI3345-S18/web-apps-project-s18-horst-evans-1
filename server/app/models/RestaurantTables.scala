@@ -30,11 +30,12 @@ object RestaurantTables {
   val customers = TableQuery[Customers]
   
   class Orders(tag: Tag) extends Table[Order](tag, "orders") {
-    def name = column[String]("name")
-    def foodID = column[Int]("foodID")
+    def username = column[String]("username")
+    def password = column[String]("password")
+    def food = column[String]("food")
     def price = column[Double]("price")
     def description = column[String]("description")
-    def * = (name,foodID,price,description) <> (Order.tupled, Order.unapply)
+    def * = (username,password,food,price,description) <> (Order.tupled, Order.unapply)
   }
   val orders = TableQuery[Orders]
   

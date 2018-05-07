@@ -1,0 +1,17 @@
+@* about Template File *@
+@(param: Any)
+
+<head>
+	<link rel="stylesheet" media="screen" href="@routes.Assets.versioned("stylesheets/project.css")">
+</head>
+<body>
+<div class = "menuBar">
+	<ul>
+		<li><form action="@controllers.routes.RestaurantController.login"><input type="submit" value="Login" id="submit"></form></li>
+		<li><form action="@controllers.routes.RestaurantController.menu"><input type="submit" value="Menu" id="submit"></form></li>
+		<li><form action="@controllers.routes.RestaurantController.showAboutE"><input type="submit" value="About" id="submit"></form></li>
+		<li><form action="@controllers.routes.RestaurantController.showHome"><input type="submit" value="Home" id="submit"></form></li>		
+	</ul>
+</div>
+
+</body>

@@ -1,0 +1,56 @@
+@* restInfo Template File *@
+@(span: Int)
+  <head>
+    <title>Diligencias</title>
+	<link rel="stylesheet" media="screen" href="@routes.Assets.versioned("stylesheets/project.css")">
+  </head>
+    <br><br><br><h1>Diligencias</h1><br>
+  <body>
+  
+<div class = "menuBar">
+	<ul>
+		<li><form action="@controllers.routes.RestaurantController.login"><input type="submit" value="Login" id="submit"></form></li>
+		<li><form action="@controllers.routes.RestaurantController.menu"><input type="submit" value="Menu" id="submit"></form></li>
+		<li><form action="@controllers.routes.RestaurantController.showAboutE"><input type="submit" value="About" id="submit"></form></li>
+		<li><form action="@controllers.routes.RestaurantController.showHome"><input type="submit" value="Home" id="submit"></form></li>
+		
+	</ul>
+	</div>
+	</body>
+	
+	  	@if(span == 1){
+	  	<div class="container">
+	    <form action="@controllers.routes.RestaurantController.showAboutE">
+	  <input type="submit" value="English" id = "submit"/>
+	</form> <br>
+	 Horas: Martes-Domingo 12p.m-11p.m<br>
+	Telephono: +52 867 714 2230 <br>
+	Dirección: Campeche 2104, Nuevo Laredo, Mexico <br>
+	Sobre Nostros:  <br>
+	#6 de 40 Restaurantes en Nuevo Laredo <br>
+	Emos sirvido la mejores carnes asadas en Nuevo Laredo  <br>
+	por mas de cuarenta años. Nosotros ponemos toda nuestra passion en todos los platillos <br>
+	que salen de nuestra consina <br>
+	 <br>
+	 </div>
+	  }else{
+	  <div class="container">
+	   <form action="@controllers.routes.RestaurantController.spanish">
+	  <input type="submit" value="Spanish" id = "submit"/>
+	</form><br>
+	 Hours: Tuesday-Sunday 12p.m - 11p.m<br>
+	Phone: +52 867 714 2230 <br>
+	Address: Campeche 2104, Nuevo Laredo, Mexico <br>
+	About us:  <br>
+	#6 of 40 Restaurants in Nuevo Laredo <br>
+	We have been serving the best parriladas in Nuevo Laredo  <br>
+	for more than 40 plus years. We put passion in every dish  <br>
+	that comes out our kitchen.   <br>
+	 <br>
+	 </div>
+	 }
+	 <div class = "image">
+ <img src="@routes.Assets.versioned("images/diligencias.jpg")" width="625" height="500" />
+ <img src="@routes.Assets.versioned("images/map.png")" width="625" height="500"  />
+ </div>
+ 
