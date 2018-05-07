@@ -1,0 +1,9 @@
+[0m[[0m[0minfo[0m] [0m[0mPackaging /users/hevans/workspace/Restaurant/shared/.jvm/target/scala-2.12/restaurant-shared_2.12-0.1.0-SNAPSHOT.jar ...[0m
+[0m[[0m[0mdebug[0m] [0m[0mInput file mappings:[0m
+[0m[[0m[0mdebug[0m] [0m[0m	spa[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /users/hevans/workspace/Restaurant/shared/.jvm/target/scala-2.12/classes/spa[0m
+[0m[[0m[0mdebug[0m] [0m[0m	spa/SharedMessages$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /users/hevans/workspace/Restaurant/shared/.jvm/target/scala-2.12/classes/spa/SharedMessages$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	spa/SharedMessages.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /users/hevans/workspace/Restaurant/shared/.jvm/target/scala-2.12/classes/spa/SharedMessages.class[0m
+[0m[[0m[0minfo[0m] [0m[0mDone packaging.[0m

@@ -9,3 +9,5 @@
 
 2018-05-07 04:34:46,152 [INFO] from play.api.Play in play-dev-mode-akka.actor.default-dispatcher-2 - Application started (Dev)
 2018-05-07 04:34:46,994 [WARN] from slick.util.AsyncExecutor in application-akka.actor.default-dispatcher-2 - Having maxConnection > maxThreads can result in deadlocks if transactions or database locks are used.
+2018-05-07 04:38:06,345 [INFO] from play.core.server.AkkaHttpServer in pool-823-thread-6 - Stopping server...
+2018-05-07 04:38:06,399 [INFO] from application in application-akka.actor.default-dispatcher-3 - ApplicationTimer demo: Stopping application at 2018-05-07T09:38:06.399Z after 202s.
